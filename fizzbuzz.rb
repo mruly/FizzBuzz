@@ -5,6 +5,9 @@ def fizzbuzz(n)
   output.empty? ? n : output
 end
 
-(1..100).each do |i|
-  puts fizzbuzz(i)
+
+if __FILE__ == $0     # prevent from automatically executing when loaded in irb
+  (1..100).each do |i|
+    puts fizzbuzz(i)
+  end
 end
