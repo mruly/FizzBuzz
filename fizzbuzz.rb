@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 def fizzbuzz(n)
   output = ""
   output << "Fizz" if n % 3 == 0
@@ -5,8 +7,9 @@ def fizzbuzz(n)
   output.empty? ? n : output
 end
 
-
-if __FILE__ == $0     # prevent from automatically executing when loaded in irb
+# prevent the code from executing automatically 
+# when used as a library, for ex. when loaded in irb
+if __FILE__ == $0     
   (1..100).each do |i|
     puts fizzbuzz(i)
   end
